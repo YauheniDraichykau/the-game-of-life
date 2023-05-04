@@ -1,5 +1,4 @@
 import {
-  Board,
   BoardSize,
   Cell,
   CellClickHandler,
@@ -7,7 +6,7 @@ import {
   UpdateCellsProps,
 } from '../types/views';
 
-export class BoardView implements Board {
+export class BoardView {
   public element: HTMLElement;
   public canvas: HTMLCanvasElement;
   private cols: number;
