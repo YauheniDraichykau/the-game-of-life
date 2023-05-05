@@ -145,7 +145,9 @@ export class GameModel {
           const ni = i + di;
           const nj = j + dj;
 
-          const neighbourKey = `${ni},${nj}`;
+          const neighbourKey = `${(ni + this.width) % this.width},${
+            (nj + this.height) % this.height
+          }`;
           const count = neighbourCounts.get(neighbourKey) || 0;
           neighbourCounts.set(neighbourKey, count + 1);
         }
